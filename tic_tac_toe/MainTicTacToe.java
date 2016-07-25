@@ -11,9 +11,18 @@ public class MainTicTacToe {
 	
 	public static void main(String[] args) {
 		
+		
 		do{
-			System.out.println("1 player game or 2 player game:"+playerType);
-			playerType= scan.nextInt();
+			try{
+				System.out.println("1 player game or 2 player game:");
+				playerType= Integer.parseInt(scan.next());
+			}
+			catch(Exception e){
+				System.out.println("Not an integer value");
+				System.out.println("Playing as a Single player");
+				playerType= 1;
+			}
+			
 		}while(playerType != 1 && playerType != 2);
 		
 		

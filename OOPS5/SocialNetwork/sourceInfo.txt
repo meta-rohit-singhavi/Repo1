@@ -1,0 +1,11 @@
+101,metacube,organization
+102,Abhishek Sharma,user
+103,Amit Sharma,user
+104,Rohit Singhavi,user
+105,Rohit Jain,user
+106,Rohit Singhavi,user
+107,Kritik garg,user
+108,TCS,organization
+109,HCL,organization
+110,IBM,organization
+111,Infosys,organization

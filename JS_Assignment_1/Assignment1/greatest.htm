@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>
+Javascript Program to find greatest and smallest from 3 numbers</title>
+<script language="javascript">
+	function greater()
+	{
+		var num1=Number(document.f1.t1.value);
+		var num2=Number(document.f1.t2.value);
+		var num3=Number(document.f1.t3.value);
+
+		alert(Math.max(num1,num2,num3) +" is greatest")
+	}
+
+</script>
+</head>
+<body>
+	<h1 align="center"><font color="teal">Javascript for find greatest among three numbers</font></h1>
+	<form name=f1 action="#">
+		num1: <input type="textbox" name="t1" required><br>
+		num2: <input type="textbox" name="t2" required><br>
+		num3: <input type="textbox" name="t3" required><br><br><br>
+	<input type="submit" value="greatest" onclick="greater()" >
+	</form>
+</body>
+</html>

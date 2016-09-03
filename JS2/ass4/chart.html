@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Chart
+</title>
+
+<style>
+#box{
+	display:inline-block;
+	margin-left:10px;
+}
+
+</style>
+
+<script type='text/javascript'>
+function fnPrintChart(){	
+ 
+	var num1 = Number(document.f1.t1.value);
+	var num2 = Number(document.f1.t2.value);
+	var num3 = Number(document.f1.t3.value);
+	var num4 = Number(document.f1.t4.value);
+	
+	var numArr = [num1,num2,num3,num4];
+	var charArr = ["A","B","C","D"];
+	var result="";
+	var max=Math.max(num1,num2,num3,num4);
+	
+	
+	for(index=0 ; index<4 ; index++){
+		result+="<div id=box>"
+		
+		for(col=0;col<(max-numArr[index]);col++){
+			result+="&nbsp "+"<br/>";
+		}
+		
+		for(row=0;row<numArr[index];row++){
+			result+="* <br/>"
+		}
+		result+=charArr[index]+"<br/>";
+		result+="</div>"
+	}
+		document.getElementById("result").innerHTML=result;
+}
+</script>
+
+</head>
+<body>
+	<h1 align="center"><font color="Blue">Program to Print given Chart of 4 numbers</font></h1>
+	<form name=f1 action="#">
+		Number1: <input type="textbox" placeholder="Enter number" name="t1" required><br>
+		Number2: <input type="textbox" placeholder="Enter number" name="t2" required><br>
+		Number3: <input type="textbox" placeholder="Enter number" name="t3" required><br>
+		Number4: <input type="textbox" placeholder="Enter number" name="t4" required><br>
+	<input type="button" value="Print" onclick="fnPrintChart()" >
+	
+	</form>
+	<div id="result" style="clear:both;"></div>
+</body>
+</html>

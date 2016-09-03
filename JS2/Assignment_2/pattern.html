@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>
+Pattern
+</title>
+<script language="javascript">
+	function printPattern()
+	{
+		var rowLength=Number(document.myForm.len.value);
+		document.write("<center>");
+		for(var row=1; row <= rowLength; row++){
+			
+			for(var col=1; col <= 2*row-1; col++){
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+	<h1 align="center"><font color="teal">Javascript to print star pattern</font></h1>
+	<form name="myForm" action="#">
+		Input Rows: <input type="textbox" placeholder="Enter row length" name="len" pattern="[0-9]" required><br>
+	<input type="button" value="Print" onclick="printPattern()" >
+	
+	
+	</form>
+</body>
+</html>

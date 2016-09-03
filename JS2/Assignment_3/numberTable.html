@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>
+Table
+</title>
+
+<script type='text/javascript'>
+function fnTable(){	
+ 
+	var num = Number(document.f1.t1.value);//parse the num to number
+
+	document.write('<table border="1" cellspacing="0">');
+	for(var i=1;i<=10;i++) {
+		document.write("<tr><td>" + num + " x " + i + " = " + num*i + "</td></tr>");
+	}
+	 
+	document.write("</table>");
+}
+
+</script>
+
+</head>
+<body>
+	<h1 align="center"><font color="Blue">Javascript Program to Print Mathamatical Table of any number</font></h1>
+	<form name=f1 action="#">
+		Number: <input type="textbox" placeholder="Enter number" name="t1" required><br>
+	<input type="button" value="Enter" onclick="fnTable()" >
+	</form>
+</body>
+</html>

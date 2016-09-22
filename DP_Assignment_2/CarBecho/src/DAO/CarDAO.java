@@ -133,8 +133,8 @@ public class CarDAO {
 			while(rs.next()){
 			CarVO temp = new CarVO();
 			temp.setAc(rs.getInt("AC"));
-			temp.setAccessoryKit(rs.getInt("powerSteering"));
-			temp.setPowerSteering(rs.getInt("accessoryKit"));
+			temp.setPowerSteering(rs.getInt("powerSteering"));
+			temp.setAccessoryKit(rs.getInt("accessoryKit"));
 			temp.setVehicleVO_ID(rs.getInt("vehicleVO_ID"));
 			carVOList.add(temp);
 			}

@@ -171,28 +171,28 @@
 					</div>
 					<input class="rb" type="radio" name="pstr" value="1"
 						<%if (((String) request.getAttribute("job")).equals("update")) {
-				if (carVO.isAc() == 1) {%>
+				if (carVO.isPowerSteering() == 1) {%>
 						checked <%}
 			}%> required>Yes<br> <input class="rb"
 						type="radio" name="pstr" value="0"
 						<%if (((String) request.getAttribute("job")).equals("update")) {
-				if (carVO.isAc() == 0) {%>
+				if (carVO.isPowerSteering() == 0) {%>
 						checked <%}
 			}%> required>No
 				</div>
 
-				<div class="line">
+			<div class="line">
 					<div class="lab">
 						<label>Accessory Kit</label>
 					</div>
 					<input class="rb" type="radio" name="kit" value="1"
 						<%if (((String) request.getAttribute("job")).equals("update")) {
-				if (carVO.isAc() == 1) {%>
-						checked <%}
-			}%> required>Yes<br> <input class="rb"
-						type="radio" name="kit" value="0"
-						<%if (((String) request.getAttribute("job")).equals("update")) {
-				if (carVO.isAc() == 0) {%>
+							if (carVO.isAccessoryKit() == 1) {%>
+								checked <%}
+								}%> required>Yes<br> <input class="rb"
+								type="radio" name="kit" value="0"
+								<%if (((String) request.getAttribute("job")).equals("update")) {
+								if (carVO.isAccessoryKit() == 0) {%>
 						checked <%}
 			}%> required>No
 				</div>

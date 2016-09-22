@@ -141,7 +141,7 @@ public class CarFacade extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd= request.getRequestDispatcher("CarFacade?job=detail");
 			rd.forward(request, response);
 		}
 
@@ -245,7 +245,18 @@ public class CarFacade extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			RequestDispatcher rd= request.getRequestDispatcher("index.jsp");
+			RequestDispatcher rd= request.getRequestDispatcher("CarFacade?job=detail");
+			rd.forward(request, response);
+		}
+		
+		if (job.equals("detail")) {
+			CarDAO carDAO = new CarDAO();
+			List<VehicleVO> vehicleVOList = carDAO.getVehicleVOList();
+			/*request.setAttribute("carList", carList);
+			request.setAttribute("carVOList", carVOList);*/
+			request.setAttribute("vehicleVOList", vehicleVOList);
+			
+			RequestDispatcher rd= request.getRequestDispatcher("list.jsp");
 			rd.forward(request, response);
 		}
 		

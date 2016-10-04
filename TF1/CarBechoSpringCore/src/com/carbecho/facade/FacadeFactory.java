@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 public class FacadeFactory {
 	public Facade getFacade(){
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");System.out.println("context :" +context.toString());
-		Facade facade = (Facade)context.getBean("facade");System.out.println("facade :" +facade.toString());
+		ApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+		Facade facade = (Facade)context.getBean("facade");
 		return facade;		
 	}
 }
